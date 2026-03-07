@@ -1,0 +1,20 @@
+CompileFlags:
+  Add:
+    # 项目头文件
+    - "-IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\inc"
+    # vcpkg 安装的头文件
+    - "-IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\build\\vcpkg_installed\\x64-windows\\include"
+    # Windows 定义
+    - "-D_WIN32"
+    - "-D_WIN32_WINNT=0x0601"
+    - "-DWIN32_LEAN_AND_MEAN"
+
+# 索引配置 - 让 clangd 能找到函数实现
+Index:
+  Background: Build
+  StandardLibrary: Yes
+
+# 额外的源文件搜索路径
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None

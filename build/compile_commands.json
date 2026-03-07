@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/P52s/Desktop/cmake_vcpkg/build",
+  "command": "C:\\PROGRA~1\\MICROS~3\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0601 -IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\inc -external:IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\build\\vcpkg_installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c11 -MDd /utf-8 /FoCMakeFiles\\RedisYkPubSub.dir\\src\\redis_client.c.obj /FdCMakeFiles\\RedisYkPubSub.dir\\ /FS -c C:\\Users\\P52s\\Desktop\\cmake_vcpkg\\src\\redis_client.c",
+  "file": "C:/Users/P52s/Desktop/cmake_vcpkg/src/redis_client.c",
+  "output": "C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/RedisYkPubSub.dir/src/redis_client.c.obj"
+},
+{
+  "directory": "C:/Users/P52s/Desktop/cmake_vcpkg/build",
+  "command": "C:\\PROGRA~1\\MICROS~3\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0601 -IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\inc -external:IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\build\\vcpkg_installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c11 -MDd /utf-8 /FoCMakeFiles\\RedisYkPubSub.dir\\src\\redis_client_data.c.obj /FdCMakeFiles\\RedisYkPubSub.dir\\ /FS -c C:\\Users\\P52s\\Desktop\\cmake_vcpkg\\src\\redis_client_data.c",
+  "file": "C:/Users/P52s/Desktop/cmake_vcpkg/src/redis_client_data.c",
+  "output": "C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/RedisYkPubSub.dir/src/redis_client_data.c.obj"
+},
+{
+  "directory": "C:/Users/P52s/Desktop/cmake_vcpkg/build",
+  "command": "C:\\PROGRA~1\\MICROS~3\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0601 -IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\inc -external:IC:\\Users\\P52s\\Desktop\\cmake_vcpkg\\build\\vcpkg_installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c11 -MDd /utf-8 /FoCMakeFiles\\RedisYkPubSub.dir\\src\\only_yk_PubSub.c.obj /FdCMakeFiles\\RedisYkPubSub.dir\\ /FS -c C:\\Users\\P52s\\Desktop\\cmake_vcpkg\\src\\only_yk_PubSub.c",
+  "file": "C:/Users/P52s/Desktop/cmake_vcpkg/src/only_yk_PubSub.c",
+  "output": "C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/RedisYkPubSub.dir/src/only_yk_PubSub.c.obj"
+}
+]

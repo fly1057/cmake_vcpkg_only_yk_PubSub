@@ -1,0 +1,9 @@
+# ninja log v5
+56	531	7943090644167301	CMakeFiles/RedisYkPubSub.dir/src/redis_client_data.c.obj	818209c7ccfe55ed
+66	535	7943090644177276	CMakeFiles/RedisYkPubSub.dir/src/only_yk_PubSub.c.obj	e4ed7d7fe6022441
+20	542	7943090644277012	CMakeFiles/RedisYkPubSub.dir/src/redis_client.c.obj	680184b9bd3d5f9b
+543	5147	7943090652769711	bin/RedisYkPubSub.exe	71bccaac694bf610
+19	478	7943208079688160	CMakeFiles/RedisYkPubSub.dir/src/redis_client.c.obj	11e1cb453583848a
+68	484	7943208079738135	CMakeFiles/RedisYkPubSub.dir/src/only_yk_PubSub.c.obj	9b4c7d027fcaf477
+44	490	7943208079852558	CMakeFiles/RedisYkPubSub.dir/src/redis_client_data.c.obj	be4aac906e71eb59
+491	6407	7943208087478361	bin/RedisYkPubSub.exe	bff435604c772ce4

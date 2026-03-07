@@ -1,0 +1,14 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "baseline": "75a2e14262fc23c1f03bac18e135c4866dd25b51",
+    "repository": "https://gitee.com/mirrors/vcpkg"
+  },
+  "registries": [
+    {
+      "kind": "artifact",
+      "location": "https://mirrors.tuna.tsinghua.edu.cn/github-release",
+      "name": "mirror"
+    }
+  ]
+}

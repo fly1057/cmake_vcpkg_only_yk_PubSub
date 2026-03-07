@@ -1,0 +1,3 @@
+C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/RedisYkPubSub.dir
+C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/edit_cache.dir
+C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/rebuild_cache.dir

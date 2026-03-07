@@ -1,0 +1,14 @@
+{
+  "cmake.configureArgs": [
+    "-DCMAKE_TOOLCHAIN_FILE=d:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+  ],
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": ["-NoLogo", "-ExecutionPolicy", "Bypass"]
+    }
+  },
+  "files.encoding": "utf8",
+  "terminal.integrated.shellIntegration.enabled": true
+}

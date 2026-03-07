@@ -1,0 +1,68 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 585e0d5e25666eda4c86c45bb30b9c1df86bc8b9488e44089a0c03b98b2ae460
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e9a3774f50c659c69ea1311ca409cf8e14c3f57e2a950320a4b2004408e03469
+Status: install ok installed
+
+Package: hiredis
+Version: 1.3.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x86-windows
+Multi-Arch: same
+Abi: ebad7344d86cd3c8146c447395737ae32e98b04b25de4bde12584347917959b8
+Description: Hiredis is a minimalistic C client library for the Redis database.
+Status: purge ok not-installed
+
+Package: libevent
+Version: 2.1.12+20230128
+Port-Version: 1
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x86-windows
+Multi-Arch: same
+Abi: ba5b6e076a9d4eadfefb90f973680caa343ca383bb5bd682a3ab283e3338ace9
+Description: An event notification library
+Default-Features: thread
+Status: purge ok not-installed
+
+Package: libevent
+Feature: thread
+Architecture: x86-windows
+Multi-Arch: same
+Description: Support for thread
+Status: purge ok not-installed
+
+Package: hiredis
+Version: 1.3.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 62b8ad75e324fee36827767f1535e4a986766791877e690f4eb16d6d6165de52
+Description: Hiredis is a minimalistic C client library for the Redis database.
+Status: install ok installed
+
+Package: libevent
+Version: 2.1.12+20230128
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d1c2af9b58159733462ca975dd14eec5dacef063a5dae0ae71398f049425b681
+Description: An event notification library
+Default-Features: thread
+Status: install ok installed
+
+Package: libevent
+Feature: thread
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support for thread
+Status: install ok installed
+
