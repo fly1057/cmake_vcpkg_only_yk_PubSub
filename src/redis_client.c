@@ -10,6 +10,7 @@
  * 4. Thread-safe event-driven model
  */
 
+
 #include "redis_client.h"
 #include <event2/util.h>
 #include <stdarg.h>
