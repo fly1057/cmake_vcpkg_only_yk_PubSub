@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/RedisYkPubSub.exe"
+			"path" : "bin/MinSizeRel/RedisYkPubSub.exe"
 		},
 		{
-			"path" : "bin/RedisYkPubSub.pdb"
+			"path" : "bin/MinSizeRel/RedisYkPubSub.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -21,7 +21,6 @@
 			"_find_package",
 			"find_package",
 			"include",
-			"add_custom_command",
 			"add_compile_options",
 			"add_compile_definitions",
 			"target_include_directories"
@@ -124,88 +123,62 @@
 			},
 			{
 				"command" : 8,
-				"file" : 0,
-				"line" : 626,
-				"parent" : 1
-			},
-			{
-				"command" : 9,
 				"file" : 1,
 				"line" : 23,
 				"parent" : 0
 			},
 			{
-				"command" : 10,
+				"command" : 9,
 				"file" : 1,
 				"line" : 20,
 				"parent" : 0
 			},
 			{
-				"command" : 11,
+				"command" : 10,
 				"file" : 1,
 				"line" : 42,
 				"parent" : 0
 			},
 			{
-				"command" : 11,
+				"command" : 10,
 				"file" : 1,
 				"line" : 48,
 				"parent" : 0
 			}
 		]
 	},
-	"codemodelVersion" : 
-	{
-		"major" : 2,
-		"minor" : 9
-	},
-	"compileDependencies" : 
-	[
-		{
-			"backtrace" : 3,
-			"id" : "hiredis::hiredis::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "libevent::core::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "libevent::extra::@6890427a1f51a3e7e1df"
-		}
-	],
 	"compileGroups" : 
 	[
 		{
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c11 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -std:c11 -MD"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 16,
 					"fragment" : "/utf-8"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 18,
+					"backtrace" : 17,
 					"define" : "WIN32_LEAN_AND_MEAN"
 				},
 				{
-					"backtrace" : 18,
+					"backtrace" : 17,
 					"define" : "_WIN32_WINNT=0x0601"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 19,
+					"backtrace" : 18,
 					"path" : "C:/Users/P52s/Desktop/cmake_vcpkg/inc"
 				},
 				{
-					"backtrace" : 20,
+					"backtrace" : 19,
 					"isSystem" : true,
 					"path" : "C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/include"
 				}
@@ -227,31 +200,33 @@
 			]
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
 	"id" : "RedisYkPubSub::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "/subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "vcpkg_installed\\x64-windows\\debug\\lib\\hiredisd.lib",
+				"fragment" : "vcpkg_installed\\x64-windows\\lib\\hiredis.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "vcpkg_installed\\x64-windows\\debug\\lib\\event_extrad.lib",
+				"fragment" : "vcpkg_installed\\x64-windows\\lib\\event_extra.lib",
 				"role" : "libraries"
 			},
 			{
@@ -266,7 +241,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "vcpkg_installed\\x64-windows\\debug\\lib\\event_cored.lib",
+				"fragment" : "vcpkg_installed\\x64-windows\\lib\\event_core.lib",
 				"role" : "libraries"
 			},
 			{
@@ -301,34 +276,8 @@
 		],
 		"language" : "C"
 	},
-	"linkLibraries" : 
-	[
-		{
-			"backtrace" : 3,
-			"id" : "hiredis::hiredis::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "libevent::core::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "libevent::extra::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"fragment" : "ws2_32"
-		}
-	],
 	"name" : "RedisYkPubSub",
 	"nameOnDisk" : "RedisYkPubSub.exe",
-	"orderDependencies" : 
-	[
-		{
-			"backtrace" : 16,
-			"id" : "RedisYkPubSub::@6890427a1f51a3e7e1df"
-		}
-	],
 	"paths" : 
 	{
 		"build" : ".",

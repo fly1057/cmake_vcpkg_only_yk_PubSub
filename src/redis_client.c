@@ -813,8 +813,7 @@ static void _on_keepalive_timeout(evutil_socket_t fd, short events, void *arg) {
  *
  * Matrix row: CONNECTING + watchdog_timeout → DISCONNECTED
  */
-static void _on_connection_watchdog_timeout(evutil_socket_t fd, short events,
-                                            void *arg) {
+static void _on_connection_watchdog_timeout(evutil_socket_t fd, short events,void *arg) {
   RedisClient *client = (RedisClient *)arg;
   if (!client) {
     return;

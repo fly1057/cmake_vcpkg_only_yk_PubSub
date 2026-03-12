@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{276D879B-13FB-376F-82E1-245ABB2FA51C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>RedisYkPubSub</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RedisYkPubSub.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RedisYkPubSub</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RedisYkPubSub.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RedisYkPubSub</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RedisYkPubSub.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RedisYkPubSub</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RedisYkPubSub.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RedisYkPubSub</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/include" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/Debug/RedisYkPubSub.exe -installedDir C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\debug\lib\hiredisd.lib;vcpkg_installed\x64-windows\debug\lib\event_extrad.lib;ws2_32.lib;crypt32.lib;vcpkg_installed\x64-windows\debug\lib\event_cored.lib;iphlpapi.lib;ws2_32.lib;shell32.lib;advapi32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/P52s/Desktop/cmake_vcpkg/build/Debug/RedisYkPubSub.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/Debug/RedisYkPubSub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/include" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/Release/RedisYkPubSub.exe -installedDir C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\hiredis.lib;vcpkg_installed\x64-windows\lib\event_extra.lib;ws2_32.lib;crypt32.lib;vcpkg_installed\x64-windows\lib\event_core.lib;iphlpapi.lib;ws2_32.lib;shell32.lib;advapi32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/P52s/Desktop/cmake_vcpkg/build/Release/RedisYkPubSub.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/Release/RedisYkPubSub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/include" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/MinSizeRel/RedisYkPubSub.exe -installedDir C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\hiredis.lib;vcpkg_installed\x64-windows\lib\event_extra.lib;ws2_32.lib;crypt32.lib;vcpkg_installed\x64-windows\lib\event_core.lib;iphlpapi.lib;ws2_32.lib;shell32.lib;advapi32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/P52s/Desktop/cmake_vcpkg/build/MinSizeRel/RedisYkPubSub.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/MinSizeRel/RedisYkPubSub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/include" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\P52s\Desktop\cmake_vcpkg\inc;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file D:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/RelWithDebInfo/RedisYkPubSub.exe -installedDir C:/Users/P52s/Desktop/cmake_vcpkg/build/vcpkg_installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\hiredis.lib;vcpkg_installed\x64-windows\lib\event_extra.lib;ws2_32.lib;crypt32.lib;vcpkg_installed\x64-windows\lib\event_core.lib;iphlpapi.lib;ws2_32.lib;shell32.lib;advapi32.lib;bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/P52s/Desktop/cmake_vcpkg/build/RelWithDebInfo/RedisYkPubSub.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/P52s/Desktop/cmake_vcpkg/build/bin/RelWithDebInfo/RedisYkPubSub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\P52s\Desktop\cmake_vcpkg\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/P52s/Desktop/cmake_vcpkg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\ST\STM32CubeCLT_1.20.0\CMake\bin\cmake.exe -SC:/Users/P52s/Desktop/cmake_vcpkg -BC:/Users/P52s/Desktop/cmake_vcpkg/build --check-stamp-file C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config-version.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfig.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfigVersion.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg-configuration.json;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg.json;D:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/P52s/Desktop/cmake_vcpkg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\ST\STM32CubeCLT_1.20.0\CMake\bin\cmake.exe -SC:/Users/P52s/Desktop/cmake_vcpkg -BC:/Users/P52s/Desktop/cmake_vcpkg/build --check-stamp-file C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config-version.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfig.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfigVersion.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg-configuration.json;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg.json;D:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/P52s/Desktop/cmake_vcpkg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\ST\STM32CubeCLT_1.20.0\CMake\bin\cmake.exe -SC:/Users/P52s/Desktop/cmake_vcpkg -BC:/Users/P52s/Desktop/cmake_vcpkg/build --check-stamp-file C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config-version.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfig.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfigVersion.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg-configuration.json;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg.json;D:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/P52s/Desktop/cmake_vcpkg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\ST\STM32CubeCLT_1.20.0\CMake\bin\cmake.exe -SC:/Users/P52s/Desktop/cmake_vcpkg -BC:/Users/P52s/Desktop/cmake_vcpkg/build --check-stamp-file C:/Users/P52s/Desktop/cmake_vcpkg/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeDependentOption.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\ST\STM32CubeCLT_1.20.0\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeCXXCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeRCCompiler.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\3.28.1\CMakeSystem.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config-version.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-config.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\hiredis\hiredis-targets.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfig.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventConfigVersion.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-debug.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared-release.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\build\vcpkg_installed\x64-windows\share\libevent\LibeventTargets-shared.cmake;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg-configuration.json;C:\Users\P52s\Desktop\cmake_vcpkg\vcpkg.json;D:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\P52s\Desktop\cmake_vcpkg\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\redis_client.c" />
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\redis_client_data.c" />
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\only_yk_PubSub.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\P52s\Desktop\cmake_vcpkg\build\ZERO_CHECK.vcxproj">
+      <Project>{103A128E-EFF0-342A-8629-E82DEDA4B9BB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

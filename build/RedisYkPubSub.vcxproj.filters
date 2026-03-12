@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\redis_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\redis_client_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\P52s\Desktop\cmake_vcpkg\src\only_yk_PubSub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\P52s\Desktop\cmake_vcpkg\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7FE57E6A-839C-3CF2-A580-317057A76F33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
