@@ -115,7 +115,7 @@ typedef struct RedisClient {
 	int reconnect_delay_ms;            /// Current reconnection delay (milliseconds)
 	struct event* reconnect_timer;     /// Reconnection timer event (delay between retry attempts)
 	int is_reconnecting;              /// Flag indicating if connection/reconnection is in progress (0=no, 1=yes)
-	struct event* connection_watchdog_timer; /// Connection watchdog timer (detects connection timeout)
+	struct event* watchdog_timer;     /// Watchdog timer (detects connection timeout)
 
 	// ========== Event Loop Keepalive ==========
 	struct event* keepalive_timer;      /// Keepalive timer to ensure event loop stays active

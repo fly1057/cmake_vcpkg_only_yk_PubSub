@@ -165,8 +165,7 @@ static void _configure_and_start_keepalive_timer(RedisClient *client);
 static void _on_keepalive_timeout(evutil_socket_t fd, short events, void *arg);
 
 /**
- * @brief Start connection watchdog timer - detect when connection takes too
- * long
+ * @brief Start watchdog timer - detect when connection takes too long
  *
  * This timer is started when actual connection begins (in
  * _on_reconnect_timeout), NOT when redis_client_connect() is called. It
@@ -176,16 +175,14 @@ static void _on_keepalive_timeout(evutil_socket_t fd, short events, void *arg);
  * 1. redis_client_connect() - creates event_loop and timer objects (not
  * started)
  * 2. _on_reconnect_timeout() - starts actual connection and this timer
- * 3. _on_connection_watchdog_timeout() - triggers if connection not complete in
- * 10s
+ * 3. _on_watchdog_timeout() - triggers if connection not complete in 10s
  *
  * @param client Redis client instance
  */
-static void _configure_and_start_connection_watchdog_timer(RedisClient *client);
+static void _configure_and_start_watchdog_timer(RedisClient *client);
 
 /**
- * @brief Connection watchdog timeout callback - triggers when connection takes
- * too long
+ * @brief Watchdog timeout callback - triggers when connection takes too long
  *
  * This timer is started when actual connection attempt begins (in
  * _on_reconnect_timeout), not when redis_client_connect() is called. It
@@ -196,7 +193,7 @@ static void _configure_and_start_connection_watchdog_timer(RedisClient *client);
  * @param events Event type (libevent parameter, unused)
  * @param arg User data (RedisClient pointer)
  */
-static void _on_connection_watchdog_timeout(evutil_socket_t fd, short events,void *arg);
+static void _on_watchdog_timeout(evutil_socket_t fd, short events, void *arg);
 
 // ============================================================================
 // Public API implementation
@@ -250,11 +247,11 @@ RedisClient *redis_client_create(const char *host, int port,const char *password
   // Initialize event loop and timers to NULL (will be created when connecting)
   // Note: memset already set these to NULL, but explicit initialization
   // improves code clarity
-  client->event_loop = NULL;                // Event loop (created in connect)
-  client->keepalive_timer = NULL;           // Keepalive timer
-  client->reconnect_timer = NULL;           // Reconnect timer
-  client->connection_watchdog_timer = NULL; // Connection watchdog timer
-  client->periodic_timer = NULL;            // Periodic task timer
+  client->event_loop = NULL;      // Event loop (created in connect)
+  client->keepalive_timer = NULL;   // Keepalive timer
+  client->reconnect_timer = NULL;   // Reconnect timer
+  client->watchdog_timer = NULL;    // Watchdog timer
+  client->periodic_timer = NULL;    // Periodic task timer
   printf("[INFO] Client initialized, event loop and timers will be created on "
          "connect\n");
 
@@ -321,11 +318,11 @@ void redis_client_free(RedisClient *client) {
     client->reconnect_timer = NULL;      // Step 3: Set pointer to NULL
   }
 
-  // 4. Clean up connection watchdog timer
-  if (client->connection_watchdog_timer) {
-    event_del(client->connection_watchdog_timer);
-    event_free(client->connection_watchdog_timer);
-    client->connection_watchdog_timer = NULL;
+  // 4. Clean up watchdog timer
+  if (client->watchdog_timer) {
+    event_del(client->watchdog_timer);
+    event_free(client->watchdog_timer);
+    client->watchdog_timer = NULL;
   }
 
   // 2. Clean up Redis connection
@@ -511,9 +508,9 @@ static void _sm_disconnected_to_connecting(RedisClient *client) {
 
   // Ensure keepalive timer keeps running during connection attempt
   _configure_and_start_keepalive_timer(client);
-  
-  // Start connection watchdog timer
-  _configure_and_start_connection_watchdog_timer(client);
+
+  // Start watchdog timer
+  _configure_and_start_watchdog_timer(client);
 }
 
 /**
@@ -718,9 +715,9 @@ static void _on_connection_completed(const redisAsyncContext *ac, int status) {
     return;
   }
 
-  // Clear connection watchdog timer since connection has completed (success or failure)
-  if (client->connection_watchdog_timer) {
-    event_del(client->connection_watchdog_timer);
+  // Clear watchdog timer since connection has completed (success or failure)
+  if (client->watchdog_timer) {
+    event_del(client->watchdog_timer);
   }
 
   REDIS_CLIENT_UNLOCK(client);
@@ -805,15 +802,14 @@ static void _on_keepalive_timeout(evutil_socket_t fd, short events, void *arg) {
 }
 
 /**
- * @brief Connection watchdog timeout callback - triggers when connection takes
- * too long
+ * @brief Watchdog timeout callback - triggers when connection takes too long
  *
  * @details This function detects stuck connections and forces state transition.
  *          Only triggers when in CONNECTING state with reconnecting flag set.
  *
  * Matrix row: CONNECTING + watchdog_timeout → DISCONNECTED
  */
-static void _on_connection_watchdog_timeout(evutil_socket_t fd, short events,void *arg) {
+static void _on_watchdog_timeout(evutil_socket_t fd, short events, void *arg) {
   RedisClient *client = (RedisClient *)arg;
   if (!client) {
     return;
@@ -912,8 +908,7 @@ static void _configure_and_start_periodic_timer(RedisClient *client) {
 }
 
 /**
- * @brief Start connection watchdog timer - detect when connection takes too
- * long
+ * @brief Start watchdog timer - detect when connection takes too long
  *
  * This timer is started when actual connection begins (in
  * _on_reconnect_timeout), NOT when redis_client_connect() is called. It
@@ -923,23 +918,22 @@ static void _configure_and_start_periodic_timer(RedisClient *client) {
  * 1. redis_client_connect() - creates event_loop and timer objects (not
  * started)
  * 2. _on_reconnect_timeout() - starts actual connection and this timer
- * 3. _on_connection_watchdog_timeout() - triggers if connection not complete in
- * 10s
+ * 3. _on_watchdog_timeout() - triggers if connection not complete in 10s
  *
  * @param client Redis client instance
  */
 static void
-_configure_and_start_connection_watchdog_timer(RedisClient *client) {
-  if (!client || !client->event_loop || !client->connection_watchdog_timer) {
+_configure_and_start_watchdog_timer(RedisClient *client) {
+  if (!client || !client->event_loop || !client->watchdog_timer) {
     return;
   }
 
   // Remove existing timer (safe if not in event loop)
-  event_del(client->connection_watchdog_timer);
+  event_del(client->watchdog_timer);
 
-  // Start connection watchdog (10 seconds timeout)
+  // Start watchdog (10 seconds timeout)
   struct timeval tv = {.tv_sec = 10, .tv_usec = 0};
-  evtimer_add(client->connection_watchdog_timer, &tv);
+  evtimer_add(client->watchdog_timer, &tv);
 }
 
 
@@ -1103,11 +1097,11 @@ int redis_client_connect(RedisClient *client) {
     // This makes it clear what resources the client uses
     client->keepalive_timer = evtimer_new(client->event_loop, _on_keepalive_timeout, client);
     client->reconnect_timer = evtimer_new(client->event_loop, _on_reconnect_timeout, client);
-    client->connection_watchdog_timer = evtimer_new(client->event_loop, _on_connection_watchdog_timeout, client);
+    client->watchdog_timer = evtimer_new(client->event_loop, _on_watchdog_timeout, client);
     client->periodic_timer =  evtimer_new(client->event_loop, _on_periodic_timeout, client);
     printf("[INFO] All timers initialized: keepalive, reconnect, "
-           "connection_watchdog, periodic\n");
-    printf("[NOTE] Timers will be started when needed (connection_watchdog on "
+           "watchdog, periodic\n");
+    printf("[NOTE] Timers will be started when needed (watchdog on "
            "connect, periodic on set_callbacks)\n");
   } else {
     // if event_loop exists, use it
